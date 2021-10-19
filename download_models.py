@@ -2,7 +2,7 @@ import gdown
 
 model_size = -1
 while model_size>2 or model_size <0:
-    print ("Pick the size you're interested in: \n \t0: Base\t1: Medium\t2: Large")
+    print ("Pick the size you're interested in: \n \t0: Base   1: Medium   2: Large")
     model_size = int(input())
     
 model_urls = ['https://drive.google.com/uc?id=1oieHqMjuz1Egxw7K9W0MJ6FKnk5kfrcB', 
