@@ -276,9 +276,9 @@ class Config():
         self.penalty = 0.1
 
 args = Config()
-print(torch.cuda.is_available())
-print(torch.cuda.current_device())
-model = torch.load("models/DialoFlow_large/model.bin")
+# print(torch.cuda.is_available())
+# print(torch.cuda.current_device())
+model = torch.load("models/DialoFlow_large/model.bin",map_location=lambda storage, loc: storage.cuda(1))
 model.cuda()
 model.eval()
 print("finish loading model")
