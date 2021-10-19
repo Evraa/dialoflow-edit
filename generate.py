@@ -280,7 +280,7 @@ args = Config()
 # print(torch.cuda.current_device())
 import os
 print(os.path.exists("models/DialoFlow_base/model.bin"))
-model = torch.load("models/DialoFlow_base/model.bin")
+model = torch.load("models/DialoFlow_base/model.pt")
 model.cuda()
 model.eval()
 print("finish loading model")
