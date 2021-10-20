@@ -83,3 +83,7 @@ Please cite our paper if you use DialoFlow in your work.
    year={2021}
 }
 ```
+
+
+pip install --upgrade transformers==3.1.0
+pip install --upgrade regex==2018.1.10
