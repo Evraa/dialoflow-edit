@@ -7,7 +7,12 @@ mydb = myclient["db2"]
 USERS_OBJ = mydb['users'] #main collection object
 
 result = (USERS_OBJ.find({'email':"haynesdonna@gmail.com"}))
-print(result[0])
+have_list = True if len(list(result)) else False
+
+print(have_list)
+
 print ("*******************")
 result = (USERS_OBJ.find({'email':"ev@gmail.com"}))
-print(len(result))
+have_list = True if len(list(result)) else False
+
+print(have_list)
