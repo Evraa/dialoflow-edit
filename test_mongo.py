@@ -3,7 +3,7 @@ from bson.objectid import ObjectId
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 # also the database name
-mydb = myclient["bb2"]
+mydb = myclient["db2"]
 USERS_OBJ = mydb['users'] #main collection object
 
 result = (USERS_OBJ.find({'email':"haynesdonna@gmail.com"}))
