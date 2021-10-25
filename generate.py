@@ -268,8 +268,8 @@ def beam_search(src, tokenizer, model, args):
         # maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
         maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:10]
         for cmp_hyp in maxhyps:
-            print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", "") + "\n")
-            print (f"Score: {cmp_hyp[1]}")
+            print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", ""))
+            print (f"Score: {cmp_hyp[1]}\n")
         return [tokenizer.decode(maxhyps[0][0], skip_special_tokens=True).replace("\n", "") + "\n"]*2
     else:
         return [([], 0)]
@@ -311,6 +311,10 @@ for i in data:
     temp = i.split("\t")
     # print(temp)
     # history = temp[0].split(" EOS ")
+    # print(history)
+    # responses = temp[1:]
+    # responses = ["I don't think its going to work", "I think it will work"]
+    # print(responses)
     history = [
             "Hello, how are you doing today, old man?",
             "I'm good that I can see you now my son :D",
@@ -321,10 +325,6 @@ for i in data:
             "Pray for us, pops.",
             "What about your wife?",
         ]
-    # print(history)
-    # responses = temp[1:]
-    # responses = ["I don't think its going to work", "I think it will work"]
-    # print(responses)
     hypstr = beam_search(history, tokenizer, model, args)
     # hypstr = sample_sequence(history, tokenizer, model, args)
     with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
