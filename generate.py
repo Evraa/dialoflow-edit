@@ -316,14 +316,15 @@ for i in data:
     # responses = ["I don't think its going to work", "I think it will work"]
     # print(responses)
     history = [
-            "Hello, how are you doing today, old man?",
-            "I'm good that I can see you now my son :D",
-            "I Know it's been awhile, please accept my apologies.",
-            "No worries, I know the difficult days you're going throw, how's your family?",
-            "My daughter just turned five this February, Karmen dropeed off of college, to pursue a carrier in fashion.",
-            "Oh, that's very good, hope they're both doing ok.",
-            "Pray for us, pops.",
-            "What about your wife?",
+            
+            "Oh man, weather is geeting colder",
+            "Hello, one can't walk around here after 8:00 pm anymore.",
+            "I had to actually..",
+            "Why is that, if I may ask?",
+            "To meet with my friends, we meet once a month.",
+            "Did you meet in February?",
+            "Yes we did.",
+            "What months are we in right now :D?"
         ]
     hypstr = beam_search(history, tokenizer, model, args)
     # hypstr = sample_sequence(history, tokenizer, model, args)

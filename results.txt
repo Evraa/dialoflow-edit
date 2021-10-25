@@ -2,7 +2,7 @@ hello how are you? EOS Hope everything is going well EOS I'm tired of this model
 Model: I'm tired of this model! I hope everything is going well
 Score: -14.556987380981445
 
-
+==============================================================================================================
 
 "Hello, how are you doing today, old man?",
 "I'm good that I can see you now my son :D",
@@ -15,32 +15,43 @@ Score: -14.556987380981445
 
 MODEL BEAMS:
     She's fine, thank you very much for asking.
-
     Score: -21.115149307250977
+
     She's fine, thank you very much for asking!
-
     Score: -21.74936180114746
+
     She's fine, thank you very much for your concern
-
     Score: -23.32432441711426
+
     She's fine, thank you very much for your concern.
-
     Score: -23.77254409790039
+
     She's fine, thank you very much for your prayers
-
     Score: -23.854132461547852
+
     She's fine, thank you very much for your prayers.
-
     Score: -24.477423858642577
+
     She's fine, thanks for asking. She'll be fine.
-
     Score: -24.91120300292969
+
     She's fine, thanks for asking. She'll be fine
-
     Score: -25.080340576171874
+
     She's fine. She'll be fine. She'll be fine.
-
     Score: -25.406282424926758
-    She's fine. She'll be fine. She'll be fine
 
+    She's fine. She'll be fine. She'll be fine
     Score: -26.202075576782228
+
+
+==============================================================================================================
+
+"Oh man, weather is geeting colder",
+"Hello, one can't walk around here after 8:00 pm anymore.",
+"I had to actually..",
+"Why is that, if I may ask?",
+"To meet with my friends, we meet once a month.",
+"Did you meet in February?",
+"Yes we did.",
+"What months are we in right now :D?"
