@@ -317,14 +317,13 @@ for i in data:
     # print(responses)
     history = [
             
-            "Oh man, weather is geeting colder",
-            "Hello, one can't walk around here after 8:00 pm anymore.",
-            "I had to actually..",
-            "Why is that, if I may ask?",
-            "To meet with my friends, we meet once a month.",
-            "Did you meet in February?",
-            "Yes we did.",
-            "What month are we in right now :D?"
+            "Hey, good evening,",
+"Hello Sir, how may I help you?",
+"I would like to buy a new TV.",
+"Alright. Is there any limits on the salary?",
+"actually yes, I can't afford anything higher than 10K, so let's keep it below that",
+"Excellent Sir, Are there any brands that you'ld like to see first?",
+
         ]
     hypstr = beam_search(history, tokenizer, model, args)
     # hypstr = sample_sequence(history, tokenizer, model, args)
