@@ -262,10 +262,13 @@ def beam_search(src, tokenizer, model, args):
                 count += 1
         hyplist = new_hyplist
     # print(f"Comp hyplist: {comp_hyplist}")
-    for cmp_hyp in comp_hyplist:
-        input(cmp_hyp)
+    # for cmp_hyp in comp_hyplist:
+    #     input(cmp_hyp)
     if len(comp_hyplist) > 0:
         maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
+        for cmp_hyp in maxhyps:
+            print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", "") + "\n")
+            print (f"Score: {cmp_hyp[1]}")
         return [tokenizer.decode(maxhyps[0][0], skip_special_tokens=True).replace("\n", "") + "\n"]*2
     else:
         return [([], 0)]
