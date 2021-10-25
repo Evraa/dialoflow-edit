@@ -219,7 +219,7 @@ def beam_search(src, tokenizer, model, args):
     sentence_idx = sentence_idx.to(args.device)
 
     delta = work_delta(model, conv_seq, sentence_idx, token_type_seq)
-    print(f"beam search: tokenized history delta: {delta}")
+    # print(f"beam search: tokenized history delta: {delta}")
 
     for i in range(args.max_length):
         new_hyplist = []
@@ -261,6 +261,7 @@ def beam_search(src, tokenizer, model, args):
                         argmin = min(enumerate(new_hyplist), key=lambda h: h[1][1])[0]
                 count += 1
         hyplist = new_hyplist
+    print(f"Comp hyplist: {comp_hyplist}")
     if len(comp_hyplist) > 0:
         maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
         return [tokenizer.decode(maxhyps[0][0], skip_special_tokens=True).replace("\n", "") + "\n"]*2
