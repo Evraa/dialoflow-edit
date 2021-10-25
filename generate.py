@@ -286,11 +286,13 @@ model.eval()
 print("finish loading model")
 tokenizer = GPT2Tokenizer.from_pretrained("models/DialoFlow_large")
 tokenizer.add_special_tokens(SPECIAL_TOKENS_DICT)
+print("tokenizer fetched")
 with open("test.refs.txt") as f:
     data = f.readlines()
 
 if_random = False
 data_results = []
+print(data)
 for i in data:
     temp = i.split("\t")
     history = temp[0].split(" EOS ")
