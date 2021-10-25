@@ -301,8 +301,8 @@ for i in data:
     # responses = temp[1:]
     responses = ["I don't think its going to work", "I think it will work"]
     print(responses)
-    hypstr = beam_search(history, tokenizer, model, args)
-    #hypstr = sample_sequence(history, tokenizer, model, args)
+    # hypstr = beam_search(history, tokenizer, model, args)
+    hypstr = sample_sequence(history, tokenizer, model, args)
     with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
         f.writelines(hypstr[0])
 
