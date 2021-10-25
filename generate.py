@@ -324,7 +324,7 @@ for i in data:
             "To meet with my friends, we meet once a month.",
             "Did you meet in February?",
             "Yes we did.",
-            "What months are we in right now :D?"
+            "What month are we in right now :D?"
         ]
     hypstr = beam_search(history, tokenizer, model, args)
     # hypstr = sample_sequence(history, tokenizer, model, args)
