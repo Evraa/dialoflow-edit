@@ -295,8 +295,11 @@ data_results = []
 print(data)
 for i in data:
     temp = i.split("\t")
+    print(temp)
     history = temp[0].split(" EOS ")
+    print(history)
     responses = temp[1:]
+    print(responses)
     hypstr = beam_search(history, tokenizer, model, args)
     #hypstr = sample_sequence(history, tokenizer, model, args)
     with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
