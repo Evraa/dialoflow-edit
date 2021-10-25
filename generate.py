@@ -298,7 +298,8 @@ for i in data:
     print(temp)
     history = temp[0].split(" EOS ")
     print(history)
-    responses = temp[1:]
+    # responses = temp[1:]
+    responses = ["I don't think its going to work", "I think it will work"]
     print(responses)
     hypstr = beam_search(history, tokenizer, model, args)
     #hypstr = sample_sequence(history, tokenizer, model, args)
