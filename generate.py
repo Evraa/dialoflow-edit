@@ -261,7 +261,7 @@ def beam_search(src, tokenizer, model, args):
                         argmin = min(enumerate(new_hyplist), key=lambda h: h[1][1])[0]
                 count += 1
         hyplist = new_hyplist
-    print(f"Comp hyplist: {comp_hyplist}")
+    # print(f"Comp hyplist: {comp_hyplist}")
     if len(comp_hyplist) > 0:
         maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
         return [tokenizer.decode(maxhyps[0][0], skip_special_tokens=True).replace("\n", "") + "\n"]*2
@@ -313,5 +313,5 @@ for i in data:
     # hypstr = sample_sequence(history, tokenizer, model, args)
     with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
         f.writelines(hypstr[0])
-        print(hypstr[0])
+        print(hypstr)
 
