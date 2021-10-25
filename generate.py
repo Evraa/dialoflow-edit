@@ -266,7 +266,7 @@ def beam_search(src, tokenizer, model, args):
     #     input(cmp_hyp)
     if len(comp_hyplist) > 0:
         # maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
-        maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])
+        maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:10]
         for cmp_hyp in maxhyps:
             print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", "") + "\n")
             print (f"Score: {cmp_hyp[1]}")
