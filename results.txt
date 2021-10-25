@@ -1,0 +1,14 @@
+hello how are you? EOS Hope everything is going well EOS I'm tired of this model EOS tell me about it!
+Model: I'm tired of this model! I hope everything is going well
+Score: -14.556987380981445
+
+
+
+"Hello, how are you doing today, old man?",
+"I'm good that I can see you now my son :D",
+"I Know it's been awhile, please accept my apologies.",
+"No worries, I know the difficult days you're going throw, how's your family?",
+"My daughter just turned five this February, Karmen dropeed off of college, to pursue a carrier in fashion.",
+"Oh, that's very good, hope they're both doing ok.",
+"Pray for us, pops.",
+"What about your wife?",

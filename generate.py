@@ -253,7 +253,7 @@ def beam_search(src, tokenizer, model, args):
                         argmin = min(enumerate(new_hyplist), key=lambda h: h[1][1])[0]
                     else:
                         break
-                else:
+                else:   
                     new_st = copy.deepcopy(st)
                     new_st.append(int(o))
                     new_hyplist.append((out + [o], new_lp, new_st))
@@ -310,7 +310,17 @@ print(data)
 for i in data:
     temp = i.split("\t")
     # print(temp)
-    history = temp[0].split(" EOS ")
+    # history = temp[0].split(" EOS ")
+    history = [
+            "Hello, how are you doing today, old man?",
+            "I'm good that I can see you now my son :D",
+            "I Know it's been awhile, please accept my apologies.",
+            "No worries, I know the difficult days you're going throw, how's your family?",
+            "My daughter just turned five this February, Karmen dropeed off of college, to pursue a carrier in fashion.",
+            "Oh, that's very good, hope they're both doing ok.",
+            "Pray for us, pops.",
+            "What about your wife?",
+        ]
     # print(history)
     # responses = temp[1:]
     # responses = ["I don't think its going to work", "I think it will work"]
