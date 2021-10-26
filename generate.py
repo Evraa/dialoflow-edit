@@ -279,11 +279,11 @@ class Config():
     def __init__(self):
         self.max_length = 40
         self.device = "cuda"
-        self.top_k = 40
+        self.top_k = 90
         self.top_p = 0
         self.min_length = 11
         self.no_sample = False
-        self.temperature = 0.9
+        self.temperature = 0.1
         self.model_checkpoint = "log/"
         self.batch_size = 2
         self.beam_size = 10
