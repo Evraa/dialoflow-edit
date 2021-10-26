@@ -330,7 +330,7 @@ import time
 while True:
     utt = input("Human >> ")
     history.append(utt)
-    start_time = time.timt()
+    start_time = time.time()
     hypstr = beam_search(history, tokenizer, model, args)
     end_time = time.time() - start_time
     history.append(hypstr[0])
