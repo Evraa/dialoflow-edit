@@ -200,7 +200,7 @@ def beam_search(src, tokenizer, model, args):
     current_output = []
     
     conv = tokenize(src, tokenizer)
-    print(f"beam search: tokenized history: {conv}")
+    # print(f"beam search: tokenized history: {conv}")
     if len(conv) % 2 == 1:
         current_output = [speaker2]
     else:
@@ -210,9 +210,9 @@ def beam_search(src, tokenizer, model, args):
     comp_hyplist = []
 
     conv_seq, sentence_idx, token_type_seq = build_input_from_input_beam(conv, current_output, tokenizer)
-    print(f"beam search: build_input_from_input_beam conv_seq: {conv_seq}")
-    print(f"beam search: build_input_from_input_beam sentence_idx: {sentence_idx}")
-    print(f"beam search: build_input_from_input_beam token_type_seq: {token_type_seq}")
+    # print(f"beam search: build_input_from_input_beam conv_seq: {conv_seq}")
+    # print(f"beam search: build_input_from_input_beam sentence_idx: {sentence_idx}")
+    # print(f"beam search: build_input_from_input_beam token_type_seq: {token_type_seq}")
     
     conv_seq = conv_seq.to(args.device)
     token_type_seq = token_type_seq.to(args.device)
