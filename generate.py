@@ -265,11 +265,11 @@ def beam_search(src, tokenizer, model, args):
     # for cmp_hyp in comp_hyplist:
     #     input(cmp_hyp)
     if len(comp_hyplist) > 0:
-        # maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
-        maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:10]
-        for cmp_hyp in maxhyps:
-            print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", ""))
-            print (f"Score: {cmp_hyp[1]}\n")
+        maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:1]
+        # maxhyps = sorted(comp_hyplist, key=lambda h: -h[1])[:10]
+        # for cmp_hyp in maxhyps:
+        #     print (tokenizer.decode(cmp_hyp[0], skip_special_tokens=True).replace("\n", ""))
+        #     print (f"Score: {cmp_hyp[1]}\n")
         return [tokenizer.decode(maxhyps[0][0], skip_special_tokens=True).replace("\n", "") + "\n"]*2
     else:
         return [([], 0)]
@@ -301,33 +301,39 @@ print("finish loading model")
 tokenizer = GPT2Tokenizer.from_pretrained("models/DialoFlow_large")
 tokenizer.add_special_tokens(SPECIAL_TOKENS_DICT)
 print("tokenizer fetched")
-with open("test.refs.txt") as f:
-    data = f.readlines()
+# with open("test.refs.txt") as f:
+#     data = f.readlines()
 
 if_random = False
 data_results = []
-print(data)
-for i in data:
-    temp = i.split("\t")
+# print(data)
+# for i in data:
+    # temp = i.split("\t")
     # print(temp)
     # history = temp[0].split(" EOS ")
     # print(history)
     # responses = temp[1:]
     # responses = ["I don't think its going to work", "I think it will work"]
     # print(responses)
-    history = [
+#     history = [
             
-            "Hey, good evening,",
-"Hello Sir, how may I help you?",
-"I would like to buy a new TV.",
-"Alright. Is there any limits on the salary?",
-"actually yes, I can't afford anything higher than 10K, so let's keep it below that",
-"Excellent Sir, Are there any brands that you'ld like to see first?",
+#             "Hey, good evening,",
+# "Hello Sir, how may I help you?",
+# "I would like to buy a new TV.",
+# "Alright. Is there any limits on the salary?",
+# "actually yes, I can't afford anything higher than 10K, so let's keep it below that",
+# "Excellent Sir, Are there any brands that you'ld like to see first?",
 
-        ]
+#         ]
+history = []
+while True:
+    utt = input("Human >> ")
+    history.append(utt)
     hypstr = beam_search(history, tokenizer, model, args)
+    history.append(hypstr[0])
+    print(f"BOT >> {hypstr[0]}")
     # hypstr = sample_sequence(history, tokenizer, model, args)
-    with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
-        f.writelines(hypstr[0])
-        print(hypstr)
+    # with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
+    #     f.writelines(hypstr[0])
+    #     print(hypstr)
 

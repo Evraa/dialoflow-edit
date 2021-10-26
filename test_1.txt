@@ -97,3 +97,34 @@ MODEL BEAMS SORTED:
 "Alright. Is there any limits on the salary?",
 "actually yes, I can't afford anything higher than 10K, so let's keep it below that",
 "Excellent Sir, Are there any brands that you'ld like to see first?",
+
+MODEL BEAMS SORTED:
+    I would like to buy a new TV.How much do you want?
+    Score: -18.66898193359375
+
+    I would like to buy a new TV.How much would you like?
+    Score: -19.063265228271483
+
+    I would like to buy a new TV.How much do you want to spend?
+    Score: -19.734908294677734
+
+    I would like to buy a new TV.How much
+    Score: -19.868389892578126
+
+    I would like to buy a new TV.How much would you like to spend?
+    Score: -20.023976516723632
+
+    I don't think so, I don't really know
+    Score: -20.087471771240235
+
+    I would like to buy a new TV.How much do you want for it?
+    Score: -20.15871353149414
+
+    I would like to buy a new TV.How much would you like to pay?
+    Score: -20.172240447998046
+
+    I don't think so, I don't really have any
+    Score: -20.809729766845702
+
+    I would like to buy a new TV.How much would you like to buy?
+    Score: -20.84099884033203
