@@ -326,12 +326,16 @@ data_results = []
 
 #         ]
 history = []
+import time
 while True:
     utt = input("Human >> ")
     history.append(utt)
+    start_time = time.timt()
     hypstr = beam_search(history, tokenizer, model, args)
+    end_time = time.time() - start_time
     history.append(hypstr[0])
-    print(f"BOT >> {hypstr[0]}")
+
+    print(f"BOT in {round(end_time,4)} >> {hypstr[0]}")
     # hypstr = sample_sequence(history, tokenizer, model, args)
     # with open("DialoFlow_results_large.txt", "a+", encoding="utf-8") as f:
     #     f.writelines(hypstr[0])
