@@ -333,7 +333,8 @@ while True:
     start_time = time.time()
     hypstr = beam_search(history, tokenizer, model, args)
     end_time = time.time() - start_time
-    history.append(hypstr[0])
+    if hypstr[0] not in history:
+        history.append(hypstr[0])
 
     print(f"BOT in {round(end_time,4)} >> {hypstr[0]}")
     # hypstr = sample_sequence(history, tokenizer, model, args)
